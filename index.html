@@ -17,14 +17,16 @@
         <div class="side_bar_main_wrapper gap-2">
           <!-- Sidebar -->
           <div id="side_bar" class="side_bar">
-            <div id="mySidenav" class="sidenav">
+            <div id="mySidenav" class="sidenav nav" role="tablist" aria-orientation="vertical">
+             <div class="all_tab_links">
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-                >&times;</a
-              >
-              <a href="#">About</a>
-              <a href="#">Services</a>
-              <a href="#">Clients</a>
-              <a href="#">Contact</a>
+              >&times;</a
+            >
+            <a href="#" class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Course</a>
+            <a href="#" class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Charts</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+             </div>
             </div>
             <span
               style="font-size: 30px; cursor: pointer"
@@ -35,159 +37,204 @@
           </div>
 
           <!-- Main Content on the Right -->
-          <div class="w-100">
-            <div class="row">
-              <div class="col-md-6" id="basic_card">
-                <div class="basic_card">
-                  <div class="basic_card_img">
-                    <img
-                      src="/assets/images/dashboard-new.png"
-                      alt="dashboard"
-                    />
+          <div class="w-100 tab-content" id="v-pills-tabContent">
+            <div  class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+              <div class="row">
+                <div class="col-md-6" id="basic_card">
+                  <div class="basic_card">
+                    <div class="basic_card_img">
+                      <img
+                        src="/assets/images/dashboard-new.png"
+                        alt="dashboard"
+                      />
+                    </div>
+                    <div class="basic_card_content">
+                      <h1>Basic to Advance Stock Market</h1>
+                      <button class="watch_now_btn" onclick="watchVideo()">
+                        Watch Now
+                      </button>
+                    </div>
                   </div>
-                  <div class="basic_card_content">
-                    <h1>Basic to Advance Stock Market</h1>
-                    <button class="watch_now_btn" onclick="watchVideo()">
-                      Watch Now
-                    </button>
+                </div>
+                <div class="col-md-6 gap-1">
+                  <div class="upstox_card">
+                    <div class="upstox_profile">
+                      <img src="./assets/images/upstox-1.PNG" alt="" />
+                    </div>
+                    <div class="upstox_content w-100">
+                      <h1>Upstox</h1>
+                      <p>India’s most trusted broker</p>
+                      <div class="upstox_btn">
+                        <button>Open A/C</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="upstox_card_two">
+                    <div class="upstox_profile">
+                      <img src="./assets/images/upstx-2.PNG" alt="" />
+                    </div>
+                    <div class="upstox_content w-100">
+                      <h1>Upstox</h1>
+                      <p>India’s most trusted broker</p>
+                      <div class="upstox_btn_two">
+                        <button>Open A/C</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 gap-1">
-                <div class="upstox_card">
-                  <div class="upstox_profile">
-                    <img src="./assets/images/upstox-1.PNG" alt="" />
-                  </div>
-                  <div class="upstox_content w-100">
-                    <h1>Upstox</h1>
-                    <p>India’s most trusted broker</p>
-                    <div class="upstox_btn">
-                      <button>Open A/C</button>
+              <div class="section_two">
+                <div class="d-flex episode_card_wrapper">
+                  <div
+                    id="myDiv"
+                    class="hidden episode_details_wrapper_1 hidden"
+                  >
+                    <div class="episode_card">
+                      <div class="episode_video">
+                        <iframe
+                          width="100%"
+                          height="100%"
+                          id="myVideo"
+                          src="https://www.youtube.com/embed/p7HKvqRI_Bo?si=wuAYHKJbRCh7pLNu"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                      <div class="episode_content w-100">
+                        <div class="episode_details">
+                          <p>Episode 1</p>
+                          <h1>What is stiock Market?</h1>
+                          <h1>12 min</h1>
+                        </div>
+                        <div class="episode_play_icon" id="playButton">
+                          <svg width="80" height="80" viewBox="0 0 24 24">
+                            <path
+                              fill="currentColor"
+                              d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2m-2 14.5v-9l6 4.5z"
+                            />
+                            <path fill="white " d="m9.5 16.5l7-4.5l-7-4.5z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="episode_card_two">
+                      <div class="episode_video">
+                        <iframe
+                          width="100%"
+                          height="100%"
+                          id="myVideo"
+                          src="https://www.youtube.com/embed/p7HKvqRI_Bo?si=wuAYHKJbRCh7pLNu"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                      <div class="episode_content w-100">
+                        <div class="episode_details">
+                          <p>Episode 1</p>
+                          <h1>What is stiock Market?</h1>
+                          <h1>12 min</h1>
+                        </div>
+                        <div class="episode_play_icon" id="playButton">
+                          <svg width="80" height="80" viewBox="0 0 24 24">
+                            <path
+                              fill="currentColor"
+                              d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2m-2 14.5v-9l6 4.5z"
+                            />
+                            <path fill="white " d="m9.5 16.5l7-4.5l-7-4.5z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="episode_card_three">
+                      <div class="episode_video">
+                        <iframe
+                          width="100%"
+                          height="100%"
+                          id="myVideo"
+                          src="https://www.youtube.com/embed/p7HKvqRI_Bo?si=wuAYHKJbRCh7pLNu"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                      <div class="episode_content w-100">
+                        <div class="episode_details">
+                          <p>Episode 1</p>
+                          <h1>What is stiock Market?</h1>
+                          <h1>12 min</h1>
+                        </div>
+                        <div class="episode_play_icon" id="playButton">
+                          <svg width="80" height="80" viewBox="0 0 24 24">
+                            <path
+                              fill="currentColor"
+                              d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2m-2 14.5v-9l6 4.5z"
+                            />
+                            <path fill="white " d="m9.5 16.5l7-4.5l-7-4.5z" />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
                   </div>
+                  <div class="episode_details_wrapper_2 gap-1">
+
+                    <!-- new -->
+                    <div id="carouselExampleIndicators" class="carousel slide video-2 episode_video-2" data-bs-ride="carousel">
+                      <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      </div>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <iframe
+                          width="100%"
+                          height="100%"
+                          id="myVideo"
+                          src="https://www.youtube.com/embed/p7HKvqRI_Bo?si=wuAYHKJbRCh7pLNu"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                        </div>
+                        <div class="carousel-item">
+                          <iframe
+                          width="100%"
+                          height="100%"
+                          id="myVideo"
+                          src="https://www.youtube.com/embed/p7HKvqRI_Bo?si=wuAYHKJbRCh7pLNu"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                        </div>
+                        <div class="carousel-item">
+                          <iframe
+                          width="100%"
+                          height="100%"
+                          id="myVideo"
+                          src="https://www.youtube.com/embed/p7HKvqRI_Bo?si=wuAYHKJbRCh7pLNu"
+                          frameborder="0"
+                          allowfullscreen
+                        ></iframe>
+                        </div>
+                      </div>
+                      <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button> -->
+                    </div>
                 </div>
-                <div class="upstox_card_two">
-                  <div class="upstox_profile">
-                    <img src="./assets/images/upstx-2.PNG" alt="" />
-                  </div>
-                  <div class="upstox_content w-100">
-                    <h1>Upstox</h1>
-                    <p>India’s most trusted broker</p>
-                    <div class="upstox_btn_two">
-                      <button>Open A/C</button>
-                    </div>
-                  </div>
+
                 </div>
               </div>
             </div>
-            <div class="section_two">
-              <div class="d-flex episode_card_wrapper">
-                <div id="myDiv" class="hidden episode_details_wrapper_1 hidden">
-                  <div class="episode_card">
-                    <div class="episode_video">
-                      <iframe
-                        width="100%"
-                        height="100%"
-                        id="myVideo"
-                        src="https://www.youtube.com/embed/p7HKvqRI_Bo?si=wuAYHKJbRCh7pLNu"
-                        frameborder="0"
-                        allowfullscreen
-                      ></iframe>
-                    </div>
-                    <div class="episode_content w-100">
-                      <div class="episode_details">
-                        <p>Episode 1</p>
-                        <h1>What is stiock Market?</h1>
-                        <h1>12 min</h1>
-                      </div>
-                      <div class="episode_play_icon" id="playButton">
-                        <svg width="80" height="80" viewBox="0 0 24 24">
-                          <path
-                            fill="currentColor"
-                            d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2m-2 14.5v-9l6 4.5z"
-                          />
-                          <path fill="white " d="m9.5 16.5l7-4.5l-7-4.5z" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="episode_card_two">
-                    <div class="episode_video">
-                      <iframe
-                        width="100%"
-                        height="100%"
-                        id="myVideo"
-                        src="https://www.youtube.com/embed/p7HKvqRI_Bo?si=wuAYHKJbRCh7pLNu"
-                        frameborder="0"
-                        allowfullscreen
-                      ></iframe>
-                    </div>
-                    <div class="episode_content w-100">
-                      <div class="episode_details">
-                        <p>Episode 1</p>
-                        <h1>What is stiock Market?</h1>
-                        <h1>12 min</h1>
-                      </div>
-                      <div class="episode_play_icon" id="playButton">
-                        <svg width="80" height="80" viewBox="0 0 24 24">
-                          <path
-                            fill="currentColor"
-                            d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2m-2 14.5v-9l6 4.5z"
-                          />
-                          <path fill="white " d="m9.5 16.5l7-4.5l-7-4.5z" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="episode_card_three">
-                    <div class="episode_video">
-                      <iframe
-                        width="100%"
-                        height="100%"
-                        id="myVideo"
-                        src="https://www.youtube.com/embed/p7HKvqRI_Bo?si=wuAYHKJbRCh7pLNu"
-                        frameborder="0"
-                        allowfullscreen
-                      ></iframe>
-                    </div>
-                    <div class="episode_content w-100">
-                      <div class="episode_details">
-                        <p>Episode 1</p>
-                        <h1>What is stiock Market?</h1>
-                        <h1>12 min</h1>
-                      </div>
-                      <div class="episode_play_icon" id="playButton">
-                        <svg width="80" height="80" viewBox="0 0 24 24">
-                          <path
-                            fill="currentColor"
-                            d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2m-2 14.5v-9l6 4.5z"
-                          />
-                          <path fill="white " d="m9.5 16.5l7-4.5l-7-4.5z" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="episode_details_wrapper_2 gap-1">
-                  <div id="video-2" class="episode_video-2">
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      id="myVideo"
-                      src="https://www.youtube.com/embed/p7HKvqRI_Bo?si=wuAYHKJbRCh7pLNu"
-                      frameborder="0"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="section_three">
+            <div class="section_three tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
               <div class="d-flex align-items-start strategy_wrapper">
                 <div class="strategy_form">
-                  <form class="h-100">
+                  <form class="h-100" autocomplete="off">
                     <label for="name">Select Strategy</label>
                     <input type="text" id="name" name="name" required />
 

@@ -23,16 +23,13 @@ window.addEventListener("resize", (event) => {
 });
 
 // WATCH VIDEO FUNCTION
-const myDiv = document.getElementById("myDiv");
-const addHeight = document.getElementById("video-2");
+const myDiv = document.querySelector(".episode_details_wrapper_1");
+const addHeight = document.getElementById("carouselExampleIndicators");
 
 const watchVideo = () => {
-  // Check if myDiv has the class 'hidden'
   if (myDiv.classList.contains("hidden")) {
-    // If true, remove the class 'hidden' from myDiv
     myDiv.classList.remove("hidden");
-
-    // Add the class 'add_height' to addHeight (video-2)
     addHeight.classList.add("add_height");
   }
 };
+
