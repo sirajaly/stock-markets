@@ -1,30 +1,13 @@
-  // Get iframe and play button
-  var video = document.getElementById("myVideo");
-  var playButton = document.getElementById("playButton");
 
-  // Function to play the video
-  function playVideo() {
-    // Replace "your_video_id" with the actual YouTube video ID
-    var videoId = "https://www.youtube.com/embed/p7HKvqRI_Bo?si=wuAYHKJbRCh7pLNu";
-
-    // Construct the YouTube video URL with the video ID
-    var videoUrl = "https://www.youtube.com/embed/p7HKvqRI_Bo?si=wuAYHKJbRCh7pLNu" + videoId + "?autoplay=1";
-
-    // Set the iframe src attribute to the constructed URL
-    video.src = videoUrl;
-  }
-
-  // Add click event listener to the play button
-  playButton.addEventListener("click", playVideo);
 
       function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
-        document.getElementById("side_bar").style.width = "280px";
+        document.getElementById("side_bar").style.minWidth = "270px";
       }
 
       function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
-        document.getElementById("side_bar").style.width = "60px";
+        document.getElementById("side_bar").style.minWidth = "60px";
       }
 
       // Add the following code to open the sidebar by default on larger screens
@@ -40,3 +23,16 @@
           closeNav();
         }
       });
+
+
+      const toggleVisibility = () => {
+        const myDiv = document.getElementById('myDiv');
+        const addHeight= document.getElementById('video-2');
+        myDiv.style.display = (myDiv.style.display === 'none' || myDiv.style.display === '') ? 'block' : 'none';
+
+        if (myDiv.style.display === 'block') {
+          addHeight.classList.add('add_height');
+        } else {
+          addHeight.classList.remove('add_height');
+        }
+    }
