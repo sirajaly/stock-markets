@@ -31,9 +31,8 @@ const watchVideo = () => {
   if (myDiv.classList.contains("hidden")) {
     // If true, remove the class 'hidden' from myDiv
     myDiv.classList.remove("hidden");
-    
+
     // Add the class 'add_height' to addHeight (video-2)
     addHeight.classList.add("add_height");
   }
 };
-
