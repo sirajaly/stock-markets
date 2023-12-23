@@ -463,6 +463,14 @@ select {
   .all_tab_links{
     margin-top: 80px;
   }
+  .section__three-input{
+    display: flex;
+    flex-direction: row;
+  }
+  .section__three-input select{
+    width: 150px;
+
+  }
 }
 @media screen and (max-width: 576px) {
   .basic_card .basic_card_img {
