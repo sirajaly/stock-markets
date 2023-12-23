@@ -33,3 +33,19 @@ const watchVideo = () => {
   }
 };
 
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+// Add event listeners to all links within the side nav
+var sideNavLinks = document.querySelectorAll("#mySidenav a");
+
+sideNavLinks.forEach(function(link) {
+  link.addEventListener("click", function() {
+    closeNav(); // Close the side nav when any link is clicked
+  });
+});

@@ -329,8 +329,38 @@ body {
   border: 6px solid #fff;
 }
 /* SECTION-THREE STYLES */
-.tab-content {
+/* .tab-content {
   margin-top: 70px;
+} */
+
+input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.section__three-input{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.section__three-input select{
+  height: 40px;
+  border-radius: 5px;
+}
+
+select {
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 .section_three .tabs_wrapper {
   height: 100%;
@@ -427,9 +457,9 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
   }
-  .section_three {
+  /* .section_three {
     margin-top: 50px;
-  }
+  } */
   .all_tab_links{
     margin-top: 80px;
   }
@@ -486,5 +516,12 @@ body {
   .episode_card_three,
   .episode_content {
     flex-direction: column;
+  }
+  .section__three-input{
+    display: flex;
+    flex-direction: row;
+  }
+  .section_three .strategy_wrapper {
+    gap: 0;
   }
 }

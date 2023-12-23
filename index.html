@@ -234,21 +234,39 @@
             <div class="section_three tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
               <div class="d-flex align-items-start strategy_wrapper">
                 <div class="strategy_form">
-                  <form class="h-100" autocomplete="off">
-                    <label for="name">Select Strategy</label>
-                    <input type="text" id="name" name="name" required />
-
-                    <label for="email">Select Symbol</label>
-                    <input type="email" id="email" name="email" required />
-
-                    <label for="password">Select Timeframe</label>
-                    <input
-                      type="time"
-                      id="timeInput"
-                      name="timeInput"
-                      value="12:00"
-                    />
+                  <form class="h-100 section__three-input" autocomplete="off">
+                    <select name="languages" id="lang">
+                      <option value="javascript">JavaScript</option>
+                      <option value="php">PHP</option>
+                      <option value="java">Java</option>
+                      <option value="golang">Golang</option>
+                      <option value="python">Python</option>
+                      <option value="c#">Cccs</option>
+                      <option value="C++">C++</option>
+                      <option value="erlang">Erlang</option>
+                    </select>
+                    <select name="languages" id="lang">
+                      <option value="javascript">HTML</option>
+                      <option value="php">PHP</option>
+                      <option value="java">Java</option>
+                      <option value="golang">Golang</option>
+                      <option value="python">Python</option>
+                      <option value="c#">C#</option>
+                      <option value="C++">C++</option>
+                      <option value="erlang">Erlang</option>
+                    </select>
+                    <select name="languages" id="lang">
+                      <option value="javascript">Time</option>
+                      <option value="php">12:00</option>
+                      <option value="java">1:00</option>
+                      <option value="golang">3:00</option>
+                      <option value="python">6:00</option>
+                      <option value="c#">10:00</option>
+                      <option value="C++">11:00</option>
+                      <option value="erlang">2:00</option>
+                    </select>
                   </form>
+                  
                 </div>
                 <div class="space_image">
                   <h3>Space For Image</h3>
